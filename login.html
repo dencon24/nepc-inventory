@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login_1.css">
+</head>
+<header>
+    
+    <h1>LOGIN</h1>
+</header>
+<body>
+   <section>
+    <div class="login-container">
+
+        <form action="login.php" method="POST">
+            <div class="fill">
+                <img src="img/Negros-Power-Logo-Black.png">
+            </div>
+            <div class="login-box">
+                <span class="login-icon">
+                    <img src="img/human.png" id="human">
+                </span>
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="login-box">
+                <input type="password" placeholder="" name="password" id="password" required>
+                <span class="login-icon">
+                    <img src="img/eyeclose.png" id="eyeicon">
+                </span> 
+                <label>Password</label>
+            
+            </div>
+            <div id="notif" style="text-align: center; color: red;">Wrong username or password.</div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</section>
+
+
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+        
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicon.src = "img/eyeopen.png";
+            } 
+            else {
+                password.type = "password";
+                eyeicon.src = "img/eyeclose.png";
+            }
+        }
+    </script>
+    <script>
+         const params = new URLSearchParams(window.location.search);
+    if (params.get('error') === '1') {
+        document.getElementById('notif').style.visibility = 'block';
+    }
+    else {
+        document.getElementById('notif').style.display = 'none';
+    }
+    </script>
+</body>
+</html>

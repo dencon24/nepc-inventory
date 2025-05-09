@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body{
+    background-color: white;
+  }
+
+header {
+  width: 100%;
+  height: 11vh;
+  position: relative;
+  display: flex;
+  background: linear-gradient(90deg, rgb(30,30,30), rgb(17,17,17), rgb(0,0,0));
+}
+
+header img {
+  margin-left: -20px;
+  padding: 1px;
+  display: flex;
+}
+
+h1 {
+  color: white;
+  margin-top: 23px;
+  margin-left: -20px;
+}
+
+section {
+    display: flex;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(162, 208, 177),  rgb(24, 200, 118));
+    background-size: cover;
+    background-position: center;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fill img {
+    flex-shrink: 0;
+    width: 70%;
+    height: 90%;
+}
+
+.login-container {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: (15px);
+  }
+  
+  .login-box {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .login-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #dddddd;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .login-box input:focus~label,
+  .login-box input:valid~label {
+    top: -5px;
+  }
+  
+  .login-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    color: #dddddd;
+    padding: 0 35px 0 5px;
+  }
+  
+  .login-box .login-icon {
+    position: absolute;
+    right: 8px;
+    color: #dddddd;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  
+  .login-box img {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 30%;
+  }
+
+  .login-box #human {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 30%;
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    margin: 1%;
+    background: #dddddd;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000000;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  .register {
+    text-align: center;
+    margin: 5px;
+    font-size: 0.9em;
+  }
+
+  .register p a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 550;
+  }
+
+  .register p a:hover{
+    text-decoration: underline;
+  }
+  
+  .notif{
+    color: red;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
